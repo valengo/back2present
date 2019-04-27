@@ -12,6 +12,10 @@
 		64E5FD5E22746FFB0094036F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64E5FD5C22746FFB0094036F /* Main.storyboard */; };
 		64E5FD6022746FFD0094036F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64E5FD5F22746FFD0094036F /* Assets.xcassets */; };
 		64E5FD6322746FFD0094036F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64E5FD6122746FFD0094036F /* LaunchScreen.storyboard */; };
+		64E5FD7022749B950094036F /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E5FD6F22749B950094036F /* Action.swift */; };
+		64E5FD722274A1200094036F /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E5FD712274A1200094036F /* Scene.swift */; };
+		64E5FD742274A3D20094036F /* SceneRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E5FD732274A3D20094036F /* SceneRepository.swift */; };
+		64E5FD762274A77C0094036F /* SceneLocalSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E5FD752274A77C0094036F /* SceneLocalSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		64E5FD5F22746FFD0094036F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		64E5FD6222746FFD0094036F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		64E5FD6422746FFD0094036F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64E5FD6F22749B950094036F /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		64E5FD712274A1200094036F /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		64E5FD732274A3D20094036F /* SceneRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneRepository.swift; sourceTree = "<group>"; };
+		64E5FD752274A77C0094036F /* SceneLocalSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneLocalSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,42 @@
 		64E5FD5722746FFB0094036F /* back2present */ = {
 			isa = PBXGroup;
 			children = (
+				64E5FD6D2274771B0094036F /* View */,
+				64E5FD6C227477130094036F /* Controller */,
 				64E5FD5822746FFB0094036F /* AppDelegate.swift */,
-				64E5FD5A22746FFB0094036F /* ViewController.swift */,
+				64E5FD6A227476E90094036F /* Model */,
 				64E5FD5C22746FFB0094036F /* Main.storyboard */,
 				64E5FD5F22746FFD0094036F /* Assets.xcassets */,
 				64E5FD6122746FFD0094036F /* LaunchScreen.storyboard */,
 				64E5FD6422746FFD0094036F /* Info.plist */,
 			);
 			path = back2present;
+			sourceTree = "<group>";
+		};
+		64E5FD6A227476E90094036F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				64E5FD6F22749B950094036F /* Action.swift */,
+				64E5FD712274A1200094036F /* Scene.swift */,
+				64E5FD732274A3D20094036F /* SceneRepository.swift */,
+				64E5FD752274A77C0094036F /* SceneLocalSource.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		64E5FD6C227477130094036F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				64E5FD5A22746FFB0094036F /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		64E5FD6D2274771B0094036F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +171,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64E5FD722274A1200094036F /* Scene.swift in Sources */,
+				64E5FD742274A3D20094036F /* SceneRepository.swift in Sources */,
 				64E5FD5B22746FFB0094036F /* ViewController.swift in Sources */,
+				64E5FD762274A77C0094036F /* SceneLocalSource.swift in Sources */,
+				64E5FD7022749B950094036F /* Action.swift in Sources */,
 				64E5FD5922746FFB0094036F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
