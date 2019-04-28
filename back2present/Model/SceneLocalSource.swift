@@ -17,6 +17,7 @@ final class SceneLocalSource {
         case watchJournal, watchMovie
         case sisterArrival
         case callDoctor, keepTalking
+        case theEnd
     }
     
     private enum FieldNames {
@@ -106,11 +107,23 @@ final class SceneLocalSource {
                           title: "A great scene",
                           text: "Once upon a time...",
                           prevScenes: prevScene,
-                          nextScenes: nextScenes)
+                          nextScenes: nextScenes,
+                          firstOption: "Do this",
+                          secondOption: "Do that")
         return scene
     }
     
     func getRootScene() -> Scene {
         return getSceneById(id: SceneIds.root.rawValue)!
+    }
+    
+    func getTheEnd() -> Scene {
+        return Scene(id: SceneIds.theEnd.rawValue,
+                     title: "The End",
+                     text: "The End",
+                     prevScenes: nil,
+                     nextScenes: nil,
+                     firstOption: nil,
+                     secondOption: nil)
     }
 }

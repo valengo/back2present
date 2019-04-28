@@ -14,6 +14,9 @@ struct Scene {
     let text: String
     let prevScenes: String?
     let nextScenes: [String]?
+    // TODO improve
+    let firstOption: String?
+    let secondOption: String?
 }
 
 extension Scene {
@@ -28,5 +31,18 @@ extension Scene {
     }
     var hasPrevious: Bool {
         return self.prevScenes != nil
+    }
+    var isEnd: Bool {
+        return self.prevScenes == nil && self.nextScenes == nil
+    }
+}
+
+extension Scene {
+    var description: CustomStringConvertible {
+        return "id: \(id);" +
+            " title: \(title);" +
+            " text: \(text);" +
+            " prevScenes: \(String(describing: prevScenes));" +
+        " nextScenes: \(String(describing: nextScenes));"
     }
 }
