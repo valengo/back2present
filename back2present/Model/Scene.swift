@@ -10,8 +10,8 @@ import Foundation
 
 struct Scene {
     let id: String
-    let title: String
-    let text: String
+    let title: String?
+    let text: String?
     let prevScenes: String?
     let nextScenes: [String]?
     // TODO improve
@@ -40,8 +40,8 @@ extension Scene {
 extension Scene {
     var description: CustomStringConvertible {
         return "id: \(id);" +
-            " title: \(title);" +
-            " text: \(text);" +
+            " title: \(String(describing: title));" +
+            " text: \(String(describing: text));" +
             " prevScenes: \(String(describing: prevScenes));" +
         " nextScenes: \(String(describing: nextScenes));"
     }

@@ -49,7 +49,11 @@ class SceneViewController: UIViewController {
     }
     
     @IBAction func firstOptionClick(_ sender: Any) {
+        if currentScene.isEnd {
+            dismiss(animated: false, completion: nil)
+        } else {
         nextScene(currentScene.nextScenes?.first)
+        }
     }
     
     @IBAction func secondOptionClick(_ sender: Any) {
