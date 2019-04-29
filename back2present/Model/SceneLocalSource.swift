@@ -52,7 +52,9 @@ final class SceneLocalSource {
         
         SceneIds.secretLab: "Realmente poderia ser. Mas não, você está num hospital mesmo. O orçamento está curto e não poderíamos pagar pelos efeitos especiais. Quem sabe na próxima edição.",
         
-        SceneIds.exploreRoom: "\tVocê resolve explorar um pouco as caixas e as flores ao lado da poltrona marrom. Afinal, estes presentes devem ser para você. As flores parecem ter sido colhidas muito recentemente e são muito bonitas e amarelas. Embora você não se lembre do seu próprio nome, sabe que são girassóis. Como num pulo, você percebe que existe um cartão junto às flores e uma sensação de ânimo enche seu peito. Será que seu nome estaria escrito nele? Você resolve ler e o nome que está escrito é:\n\n\tAgora você já sabe o seu nome! Mas como foi parar ali? Que dia é hoje? Explorando um pouco mais os presentes, percebe que são várias caixas de chocolates e alguns livros. Olhando um pouco mais a sua volta, nota que existe uma pequena televisão no canto da parede. Você decide:",
+        SceneIds.exploreRoom: "\tVocê resolve explorar um pouco as caixas e as flores ao lado da poltrona marrom. Afinal, estes presentes devem ser para você. As flores parecem ter sido colhidas muito recentemente e são muito bonitas e amarelas. Embora você não se lembre do seu próprio nome, sabe que são girassóis. Como num pulo, você percebe que existe um cartão junto às flores e uma sensação de ânimo enche seu peito. Será que seu nome estaria escrito nele? Você resolve ler e o nome que está escrito é:\n\n" +
+            "\t<nome>\n\n" +
+        "\tAgora você já sabe o seu nome! Mas como foi parar ali? Que dia é hoje? Explorando um pouco mais os presentes, percebe que são várias caixas de chocolates e alguns livros. Olhando um pouco mais a sua volta, nota que existe uma pequena televisão no canto da parede. Você decide:",
         
         SceneIds.leaveRoomAfterExploring: "Com a decisão de sair e tentar achar alguém você se direciona até a porta, mas alguém a abre antes de você...",
         
@@ -65,8 +67,7 @@ final class SceneLocalSource {
         "\tA enfermeira sai e você fica só no quarto. Ainda com muitas dúvidas, você fica em pé pensando...\n\n" +
         "\tAté que a porta do quarto abre novamente...",
         
-        SceneIds.turnOnTV: "\tQue alívio. Parece que não passou tanto tempo assim. Ao assistir a reportagem sobre como aplicativos para celular podem ajudar as pessoas a desenvolverem hábitos melhores, você percebe que as pessoas parecem usar roupas e cortes de cabelo que são familiares para você. Engraçado, parece que algumas coisas estão bem claras na sua cabeça...\n\n" +
-        "\tA porta abre...",
+        SceneIds.turnOnTV: "\tVocê liga a televisão e está passando...",
         
         SceneIds.watchJournal: "\tQue alívio. Parece que não passou tanto tempo assim. Ao assistir a reportagem sobre como aplicativos para celular podem ajudar as pessoas a desenvolverem hábitos melhores, você percebe que as pessoas parecem usar roupas e cortes de cabelo que são familiares para você. Engraçado, parece que algumas coisas estão bem claras na sua cabeça...\n\n" +
         "\tA porta abre...",

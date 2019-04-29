@@ -11,6 +11,7 @@ import Foundation
 final class SceneRepository {
     static let shared = SceneRepository()
     private let sceneLocalSource = SceneLocalSource()
+    static var name = "Alison"
     
     private init() {
         

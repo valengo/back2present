@@ -18,6 +18,7 @@ class SceneViewController: UIViewController {
     
     var sceneStack = Stack()
     var currentScene = SceneRepository.shared.getFirstScene()
+    let name = SceneRepository.name
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,8 +31,12 @@ class SceneViewController: UIViewController {
     }
     
     private func setView(_ scene: Scene) {
+        var text = scene.text
+        if text != nil {
+            text = text!.replacingOccurrences(of: "<nome>", with: name, options: .literal, range: nil)
+        }
         sceneLabel.text = scene.title
-        sceneText.text = scene.text
+        sceneText.text = text
         
         if scene.firstOption != nil {
             firstOptionBtn.isHidden = false

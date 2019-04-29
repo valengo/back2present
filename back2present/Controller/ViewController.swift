@@ -9,10 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet var nameTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+    
+    @IBAction func changeText(_ sender: Any) {
+        guard let name = nameTextField.text else {
+            return
+        }
+        SceneRepository.name = name
     }
 }
 
