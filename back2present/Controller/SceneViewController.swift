@@ -35,8 +35,8 @@ class SceneViewController: UIViewController {
         if text != nil {
             text = text!.replacingOccurrences(of: "<nome>", with: name, options: .literal, range: nil)
         }
-        sceneLabel.text = scene.title
         sceneText.text = text
+        sceneLabel.text = scene.title
         
         if scene.firstOption != nil {
             firstOptionBtn.isHidden = false

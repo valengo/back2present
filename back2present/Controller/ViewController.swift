@@ -19,6 +19,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillHide),
                                                name: UIResponder.keyboardWillHideNotification, object: nil)
         nameTextField.delegate = self
+        nameTextField.useUnderline()
+        
+        
     }
     
     @IBAction func changeText(_ sender: Any) {
@@ -47,6 +50,21 @@ class ViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ nameTextField: UITextField) -> Bool {
         self.view.endEditing(true)
         return true
+    }
+}
+
+extension UITextField {
+    func useUnderline() {
+        let underline = CALayer()
+        let borderWidth = CGFloat(1.0)
+        let color = UIColor.white.withAlphaComponent(0.5)
+        underline.borderColor = color.cgColor
+        underline.frame = CGRect(origin: CGPoint(x: 0, y : self.frame.size.height - borderWidth),
+                                 size: CGSize(width: self.frame.size.width, height: self.frame.size.height))
+        underline.borderWidth = borderWidth
+        self.layer.addSublayer(underline)
+        self.layer.masksToBounds = true
+
     }
 }
 

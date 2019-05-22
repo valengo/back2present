@@ -13,15 +13,32 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="back2present" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rocks" translatesAutoresizingMaskIntoConstraints="NO" id="fcu-wh-FhR">
+                                <rect key="frame" x="0.0" y="5" width="414" height="896"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u1j-dz-wZ6">
+                                <rect key="frame" x="62" y="611" width="290" height="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="changeText:" destination="BYZ-38-t0r" eventType="editingChanged" id="gPS-Ro-O4c"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seu nome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gj1-QP-hHb">
+                                <rect key="frame" x="62" y="651" width="290" height="20"/>
+                                <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0i-nQ-LTh">
-                                <rect key="frame" x="153.5" y="727" width="107" height="45"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <rect key="frame" x="152.5" y="751" width="109" height="41"/>
+                                <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="25"/>
                                 <state key="normal" title="Começar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -29,23 +46,21 @@
                                     <segue destination="H20-3Z-XlO" kind="presentation" id="37F-mG-Qnm"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite um nome..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u1j-dz-wZ6">
-                                <rect key="frame" x="102" y="653" width="210" height="34"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
-                                <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="changeText:" destination="BYZ-38-t0r" eventType="editingChanged" id="gPS-Ro-O4c"/>
-                                </connections>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="gj1-QP-hHb" firstAttribute="trailing" secondItem="u1j-dz-wZ6" secondAttribute="trailing" id="0Uy-IT-tyT"/>
+                            <constraint firstItem="gj1-QP-hHb" firstAttribute="leading" secondItem="u1j-dz-wZ6" secondAttribute="leading" id="Dly-DM-dd1"/>
                             <constraint firstItem="d0i-nQ-LTh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E7p-6i-GeL"/>
-                            <constraint firstItem="u1j-dz-wZ6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="WI6-me-Znv"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="d0i-nQ-LTh" secondAttribute="bottom" constant="90" id="aJY-s1-CP2"/>
-                            <constraint firstItem="d0i-nQ-LTh" firstAttribute="top" secondItem="u1j-dz-wZ6" secondAttribute="bottom" constant="40" id="vYr-rq-bSh"/>
+                            <constraint firstItem="u1j-dz-wZ6" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="GhW-NY-doQ"/>
+                            <constraint firstItem="gj1-QP-hHb" firstAttribute="top" secondItem="u1j-dz-wZ6" secondAttribute="bottom" constant="18" id="IMS-9C-8RG"/>
+                            <constraint firstItem="u1j-dz-wZ6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Pmp-fN-qLm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="d0i-nQ-LTh" secondAttribute="bottom" constant="70" id="aJY-s1-CP2"/>
+                            <constraint firstItem="d0i-nQ-LTh" firstAttribute="top" secondItem="gj1-QP-hHb" secondAttribute="bottom" constant="80" id="eg6-nJ-eak"/>
+                            <constraint firstItem="fcu-wh-FhR" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="fqI-Ji-aLQ"/>
+                            <constraint firstItem="fcu-wh-FhR" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="oZY-BK-wZ8"/>
+                            <constraint firstItem="fcu-wh-FhR" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ozz-ud-pKI"/>
+                            <constraint firstItem="fcu-wh-FhR" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="tNP-2N-Wlz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -53,6 +68,7 @@
                         <outlet property="nameTextField" destination="u1j-dz-wZ6" id="EKF-gW-R9a"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="191" y="127"/>
         </scene>
@@ -74,7 +90,7 @@
                                     <action selector="close:" destination="H20-3Z-XlO" eventType="touchUpInside" id="Pv8-b2-dPh"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahs-1w-9Vh">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="ahs-1w-9Vh">
                                 <rect key="frame" x="174" y="140" width="66.5" height="29"/>
                                 <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -83,10 +99,13 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="Yah-5v-xar">
                                 <rect key="frame" x="20" y="205" width="374" height="515"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="30"/>
+                                </variation>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbk-BC-sJE">
                                 <rect key="frame" x="171.5" y="809" width="71" height="33"/>
@@ -108,18 +127,25 @@
                                     <action selector="firstOptionClick:" destination="H20-3Z-XlO" eventType="touchUpInside" id="R2i-TQ-Ifg"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Efj-kh-04L">
+                                <rect key="frame" x="0.0" y="5" width="414" height="896"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="bdz-03-86F" firstAttribute="leading" secondItem="iYN-qV-bP6" secondAttribute="leading" constant="20" id="4Ra-an-6E6"/>
                             <constraint firstItem="ahs-1w-9Vh" firstAttribute="top" secondItem="bdz-03-86F" secondAttribute="bottom" constant="40" id="5Yn-7n-rTe"/>
                             <constraint firstItem="ReN-Z1-6MS" firstAttribute="centerX" secondItem="iYN-qV-bP6" secondAttribute="centerX" id="7hF-Gd-Uno"/>
+                            <constraint firstItem="Efj-kh-04L" firstAttribute="width" secondItem="Bcw-5Q-0Rw" secondAttribute="width" id="Aue-VY-i4p"/>
                             <constraint firstItem="gbk-BC-sJE" firstAttribute="centerX" secondItem="iYN-qV-bP6" secondAttribute="centerX" id="FPp-Ta-u5T"/>
+                            <constraint firstItem="Efj-kh-04L" firstAttribute="centerX" secondItem="iYN-qV-bP6" secondAttribute="centerX" id="OZf-Gq-1jh"/>
                             <constraint firstItem="Yah-5v-xar" firstAttribute="top" secondItem="ahs-1w-9Vh" secondAttribute="bottom" constant="36" id="Pmh-w2-Wgb"/>
                             <constraint firstItem="iYN-qV-bP6" firstAttribute="trailing" secondItem="Yah-5v-xar" secondAttribute="trailing" constant="20" id="WPO-b6-ZlW"/>
                             <constraint firstItem="ReN-Z1-6MS" firstAttribute="top" secondItem="Yah-5v-xar" secondAttribute="bottom" constant="36" id="Z4b-tc-nZk"/>
                             <constraint firstItem="Yah-5v-xar" firstAttribute="leading" secondItem="iYN-qV-bP6" secondAttribute="leading" constant="20" id="ebR-9G-c0E"/>
                             <constraint firstItem="gbk-BC-sJE" firstAttribute="top" secondItem="ReN-Z1-6MS" secondAttribute="bottom" constant="20" id="kRj-FW-SzX"/>
+                            <constraint firstItem="Efj-kh-04L" firstAttribute="height" secondItem="Bcw-5Q-0Rw" secondAttribute="height" id="mM7-4F-Pcg"/>
+                            <constraint firstItem="Efj-kh-04L" firstAttribute="centerY" secondItem="iYN-qV-bP6" secondAttribute="centerY" id="p3y-yF-wup"/>
                             <constraint firstItem="bdz-03-86F" firstAttribute="top" secondItem="iYN-qV-bP6" secondAttribute="top" constant="20" id="pJA-JF-Oad"/>
                             <constraint firstItem="iYN-qV-bP6" firstAttribute="bottom" secondItem="gbk-BC-sJE" secondAttribute="bottom" constant="20" id="rUq-LD-EDu"/>
                             <constraint firstItem="ahs-1w-9Vh" firstAttribute="centerX" secondItem="iYN-qV-bP6" secondAttribute="centerX" id="weP-oK-7pL"/>
@@ -135,7 +161,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0kQ-un-EaJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1166.6666666666667" y="126.5625"/>
+            <point key="canvasLocation" x="943" y="127"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="2250" height="1500"/>
+        <image name="rocks" width="2250" height="1500"/>
+    </resources>
 </document>
